@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import './App.css';
 
 function App() {
@@ -12,7 +14,7 @@ function App() {
         setTimeout(()=>{
 
         setBlogs(data);
-        },2000
+        },500
       );})
       .catch((error) => console.error("Error loading blogs:", error));
   }, []);
@@ -37,18 +39,19 @@ function App() {
                     ) : (
                       blogs.map((post) => (
                         <article key={post.id} className="blog-post col-md-6">
-                          <div className="card h-100 shadow-sm">
+                          <div className="card blog-list-card h-100  shadow-sm" >
                             <div className="card-body d-flex flex-column">
-                              <h2 className="card-title h5">{post.title}</h2>
-                              <p className="text-muted small mb-2">
+                              <h2 className="card-title fw-bold h5">{post.title}</h2>
+                              <p className="card-text text-center flex-grow-1">{post.summary}</p>
+                              <p className="text-muted fst-italic text-start small mb-2">
                                 Published on: {new Date(post.date).toLocaleDateString()}
                               </p>
-                              <p className="card-text flex-grow-1">{post.summary}</p>
                               <Link
                                 to={`/post/${post.id}`}
-                                className="btn btn-primary mt-auto align-self-start"
+                                className="mt-auto align-self-end"
+                                hash="hash"
                               >
-                                Read More
+                                <i class="bi bs-primary fs-4 bi-arrow-right"></i>
                               </Link>
                             </div>
                           </div>
@@ -87,9 +90,9 @@ function BlogPost({ blogs }) {
           <p className="text-muted small">
             Published on: {new Date(post.date).toLocaleDateString()}
           </p>
-          <p className="card-text">{post.content}</p>
-          <Link to="/" className="btn btn-secondary">
-            Back to Blog
+          <ReactMarkdown rehypePlugins={[rehypeRaw]} >{post.content}</ReactMarkdown>
+          <Link to="/" >
+            <i class="bi bs-primary fs-4 bi-arrow-left"> Back</i>
           </Link>
         </div>
       </div>
