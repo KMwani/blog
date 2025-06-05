@@ -15,7 +15,7 @@
   },
   {
     "id": 3,
-    "title": "A Guide to RESTful API Design",
+    "title": "A guide to RESTful API Design",
     "date": "2025-05-20",
     "summary": "Explore best practices for designing RESTful APIs that are scalable, easy to use, and maintainable.",
     "content": "RESTful APIs are based on standard HTTP methods like GET, POST, PUT, and DELETE. Designing them involves defining clear resource URIs, using proper status codes, supporting pagination and filtering, and securing endpoints. Following conventions makes APIs intuitive for developers and helps with long-term maintenance."
