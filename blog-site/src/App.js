@@ -6,7 +6,8 @@ import './App.css';
 
 function App() {
   const [blogs, setBlogs] = useState([]);
-
+  const[searchItem,setSearchItem] =useState('')
+  const[filteredBlogs,setFilteredBlogs] =useState(blogs)
   useEffect(() => {
     fetch("/blogs.json")
       .then((res) => res.json())
@@ -14,11 +15,21 @@ function App() {
         setTimeout(()=>{
 
         setBlogs(data);
+        setFilteredBlogs(data);
         },500
       );})
       .catch((error) => console.error("Error loading blogs:", error));
   }, []);
   
+ function handleSearch(e){
+    const term = e.target.value.toLowerCase();
+    setSearchItem(term);
+    const filtered = blogs.filter((blog)=>{
+      return  blog.summary.toLowerCase().includes(term) || blog.content.toLowerCase().includes(term)
+    });
+    setFilteredBlogs(filtered);
+
+ }
     return (
     <Router>
       <div className="App">
@@ -29,15 +40,26 @@ function App() {
           </header>
 
           <main className="app-main">
+            <div className="d-flex justify-content-end mb-3">
+               <input
+                    className="form-control p-2 rounded border border-2 w-auto"
+                    type="search"
+                    value={searchItem}
+                    placeholder="Search Blogs"
+                    aria-label="Search"
+                    onChange={handleSearch}
+              />
+            </div>
+
             <Routes>
               <Route
                 path="/"
                 element={
                   <section className="blog-list row g-4">
-                    {blogs.length === 0 ? (
+                    {filteredBlogs.length === 0 ? (
                       <p>Loading blog posts...</p>
                     ) : (
-                      blogs.map((post) => (
+                      filteredBlogs.map((post) => (
                         <article key={post.id} className="blog-post col-md-6">
                           <div className="card blog-list-card h-100  shadow-sm" >
                             <div className="card-body d-flex flex-column">
