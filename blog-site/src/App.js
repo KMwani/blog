@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import BlogPost from "./BlogPost";
 import './App.css';
 
 function App() {
@@ -93,32 +92,6 @@ function App() {
         </div>
       </div>
     </Router>
-  );
-}
-
-function BlogPost({ blogs }) {
-  const { id } = useParams();
-  const post = blogs.find((blog) => blog.id.toString() === id);
-
-  if (!post) {
-    return <p>Post not found!</p>;
-  }
-
-  return (
-    <div className="container">
-      <div className="card my-4">
-        <div className="card-body">
-          <h1 className="card-title">{post.title}</h1>
-          <p className="text-muted small">
-            Published on: {new Date(post.date).toLocaleDateString()}
-          </p>
-          <ReactMarkdown rehypePlugins={[rehypeRaw]} >{post.content}</ReactMarkdown>
-          <Link to="/" >
-            <i class="bi bs-primary fs-4 bi-arrow-left"> Back</i>
-          </Link>
-        </div>
-      </div>
-    </div>
   );
 }
 
