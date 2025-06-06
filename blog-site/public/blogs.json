@@ -26,5 +26,85 @@
     "date": "2025-06-02",
     "summary": "What is python programming and why is it important? Here is your answer!",
     "content": "Python variables. Functions. constants . data types all in this blog"
+  },
+
+  {
+    "id": 5,
+    "title": "Understanding Asynchronous JavaScript",
+    "date": "2025-06-01",
+    "summary": "Learn how asynchronous programming works in JavaScript, including callbacks, promises, and async/await.",
+    "content": "<p style='color:orangered;'>Asynchronous JavaScript allows you to perform long network requests without blocking the main thread.</p> <p> Callbacks were the first way to handle this, but they can lead to callback hell.<br> Promises improved this by allowing chaining, and async/await syntax makes asynchronous<br> code look synchronous for better readability\n </p>"
+  },
+  {
+    "id": 6,
+    "title": "Understanding Asynchronous JavaScript",
+    "date": "2025-06-01",
+    "summary": "Learn how asynchronous programming works in JavaScript, including callbacks, promises, and async/await.",
+    "content": "<p style='color:orangered;'>Asynchronous JavaScript allows you to perform long network requests without blocking the main thread.</p> <p> Callbacks were the first way to handle this, but they can lead to callback hell.<br> Promises improved this by allowing chaining, and async/await syntax makes asynchronous<br> code look synchronous for better readability\n </p>"
+  },
+  {
+    "id": 7,
+    "title": "Getting Started with React Hooks",
+    "date": "2025-05-28",
+    "summary": "An introduction to React Hooks, explaining how to use useState and useEffect to manage state and side effects.",
+    "content": "React Hooks let you use state and other React features without writing a class. The useState hook lets you add state to function components, while useEffect lets you perform side effects like data fetching. Hooks promote cleaner, more readable code and make it easier to reuse logic."
+  },
+  {
+    "id": 8,
+    "title": "A guide to RESTful API Design",
+    "date": "2025-05-20",
+    "summary": "Explore best practices for designing RESTful APIs that are scalable, easy to use, and maintainable.",
+    "content": "RESTful APIs are based on standard HTTP methods like GET, POST, PUT, and DELETE. Designing them involves defining clear resource URIs, using proper status codes, supporting pagination and filtering, and securing endpoints. Following conventions makes APIs intuitive for developers and helps with long-term maintenance."
+  },
+  {
+    "id": 9,
+    "title": "Python Programming for Data Science",
+    "date": "2025-06-02",
+    "summary": "What is python programming and why is it important? Here is your answer!",
+    "content": "Python variables. Functions. constants . data types all in this blog"
+  },
+
+  {
+    "id": 10,
+    "title": "Getting Started with React Hooks",
+    "date": "2025-05-28",
+    "summary": "An introduction to React Hooks, explaining how to use useState and useEffect to manage state and side effects.",
+    "content": "React Hooks let you use state and other React features without writing a class. The useState hook lets you add state to function components, while useEffect lets you perform side effects like data fetching. Hooks promote cleaner, more readable code and make it easier to reuse logic."
+  },
+  {
+    "id": 11,
+    "title": "A guide to RESTful API Design",
+    "date": "2025-05-20",
+    "summary": "Explore best practices for designing RESTful APIs that are scalable, easy to use, and maintainable.",
+    "content": "RESTful APIs are based on standard HTTP methods like GET, POST, PUT, and DELETE. Designing them involves defining clear resource URIs, using proper status codes, supporting pagination and filtering, and securing endpoints. Following conventions makes APIs intuitive for developers and helps with long-term maintenance."
+  },
+  {
+    "id": 12,
+    "title": "Python Programming for Data Science",
+    "date": "2025-06-02",
+    "summary": "What is python programming and why is it important? Here is your answer!",
+    "content": "Python variables. Functions. constants . data types all in this blog"
+  },
+  {
+    "id": 13,
+    "title": "Getting Started with React Hooks",
+    "date": "2025-05-28",
+    "summary": "An introduction to React Hooks, explaining how to use useState and useEffect to manage state and side effects.",
+    "content": "React Hooks let you use state and other React features without writing a class. The useState hook lets you add state to function components, while useEffect lets you perform side effects like data fetching. Hooks promote cleaner, more readable code and make it easier to reuse logic."
+  },
+  {
+    "id": 14,
+    "title": "A guide to RESTful API Design",
+    "date": "2025-05-20",
+    "summary": "Explore best practices for designing RESTful APIs that are scalable, easy to use, and maintainable.",
+    "content": "RESTful APIs are based on standard HTTP methods like GET, POST, PUT, and DELETE. Designing them involves defining clear resource URIs, using proper status codes, supporting pagination and filtering, and securing endpoints. Following conventions makes APIs intuitive for developers and helps with long-term maintenance."
+  },
+  {
+    "id": 15,
+    "title": "Python Programming for Data Science",
+    "date": "2025-06-02",
+    "summary": "What is python programming and why is it important? Here is your answer!",
+    "content": "Python variables. Functions. constants . data types all in this blog"
   }
 ]
+
